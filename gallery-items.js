@@ -63,6 +63,3 @@ export default [
     description: 'Lighthouse Coast Sea',
   },
 ];
-
-const a = 1;
-console.log('~ a', a);
