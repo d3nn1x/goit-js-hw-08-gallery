@@ -7,6 +7,7 @@ const lightboxOverlay = document.querySelector('.lightbox__overlay');
 const btnEl = document.querySelector('button[data-action="close-lightbox"]');
 
 let currentIndex;
+let indexData = data.length;
 
 const cardsMarkup = createCardGallerMarkup(data);
 
@@ -83,10 +84,10 @@ function back() {
 }
 
 function onArrowPress(e) {
-  if (e.key === 'ArrowLeft') {
+  if (e.key === 'ArrowLeft' && currentIndex > 0) {
     back();
   }
-  if (e.key === 'ArrowRight') {
+  if (e.key === 'ArrowRight' && currentIndex < indexData) {
     forward();
   }
 }
