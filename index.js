@@ -37,7 +37,7 @@ galleryRef.insertAdjacentHTML('beforeend', cardsMarkup);
 
 function openModal(e) {
   e.preventDefault();
-  currentIndex = e.target.dataset.index;
+  currentIndex = +e.target.dataset.index;
 
   if (!e.target.classList.contains('gallery__image')) {
     return;
@@ -56,6 +56,7 @@ function closeModalOnBtn() {
   lightboxImage.src = '';
   lightboxImage.alt = '';
   document.removeEventListener('keydown', closeModalOnKey);
+  document.removeEventListener('keydown', onArrowPress);
 }
 
 function closeModalOnOverlay(e) {
@@ -89,16 +90,3 @@ function onArrowPress(e) {
     forward();
   }
 }
-
-//   function frw(){
-//   if (current < kolvo) {
-//   current++;
-//   document.images['r'].src=tumb[current-1].src;
-//   }
-//   }
-//   function bck(){
-//   if (current > 1) {
-//   current--;
-//   document.images['r'].src=tumb[current-1].src;
-//   }
-//   }
