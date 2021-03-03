@@ -7,7 +7,7 @@ const lightboxOverlay = document.querySelector('.lightbox__overlay');
 const btnEl = document.querySelector('button[data-action="close-lightbox"]');
 
 let currentIndex;
-let indexData = data.length;
+let indexData = data.length - 1;
 
 const cardsMarkup = createCardGallerMarkup(data);
 
